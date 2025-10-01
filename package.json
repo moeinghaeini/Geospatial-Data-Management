@@ -1,0 +1,39 @@
+{
+  "name": "geospatial-data-management",
+  "version": "1.0.0",
+  "description": "Modern geospatial data management application with interactive mapping and analysis",
+  "main": "server/index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "nodemon server/index.js",
+    "client": "cd client && npm start",
+    "build": "cd client && npm run build",
+    "install-all": "npm install && cd client && npm install",
+    "start": "node server/index.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "pg": "^8.11.3",
+    "@turf/turf": "^6.5.0",
+    "geojson": "^0.5.0",
+    "multer": "^1.4.5-lts.1",
+    "csv-parser": "^3.0.0",
+    "axios": "^1.6.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1",
+    "concurrently": "^8.2.2"
+  },
+  "keywords": [
+    "geospatial",
+    "mapping",
+    "gis",
+    "postgis",
+    "react",
+    "nodejs"
+  ],
+  "author": "Geospatial Data Management Team",
+  "license": "MIT"
+}
