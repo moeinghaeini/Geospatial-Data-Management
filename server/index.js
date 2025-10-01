@@ -1,6 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const path = require('path');
+const { PythonIntegration, pythonIntegrationMiddleware, setupPythonRoutes } = require('../integrate_python');
 
 const app = express();
 const PORT = process.env.PORT || 5001;
@@ -21,6 +22,12 @@ const dataRoutes = require('./routes/data');
 // Routes
 app.use('/api/geospatial', geospatialRoutes);
 app.use('/api/data', dataRoutes);
+
+// Python integration middleware
+app.use(pythonIntegrationMiddleware);
+
+// Setup Python integration routes
+setupPythonRoutes(app);
 
 // Health check endpoint
 app.get('/api/health', (req, res) => {

@@ -97,6 +97,16 @@ The application currently features a curated collection of Italian geographical 
 - **CORS**: Cross-origin resource sharing for API access
 - **RESTful API**: Clean REST endpoints for geospatial operations
 
+### **Python Backend (Advanced Features)**
+- **FastAPI**: Modern, fast web framework for building APIs
+- **Geopandas**: Advanced geospatial data manipulation
+- **Shapely**: Geometric objects and operations
+- **Scikit-learn**: Machine learning algorithms
+- **Folium**: Interactive mapping and visualization
+- **Plotly**: Advanced data visualization
+- **Matplotlib/Seaborn**: Statistical plotting
+- **WebSocket**: Real-time communication
+
 ### **Key Technical Features**
 - **Spatial Indexing**: GIST indexes for optimal spatial query performance
 - **GeoJSON Support**: Standard geospatial data format compliance
@@ -161,13 +171,36 @@ The application currently features a curated collection of Italian geographical 
    ```
 
 5. **Start the application**
+
+   **Option 1: Basic Node.js application**
    ```bash
    npm run dev
    ```
 
+   **Option 2: Complete application with Python integration**
+   ```bash
+   npm run start-complete
+   # or
+   ./start_complete_app.sh
+   ```
+
+   **Option 3: Manual setup**
+   ```bash
+   # Terminal 1: Start Node.js backend
+   npm run server
+   
+   # Terminal 2: Start React frontend
+   npm run client
+   
+   # Terminal 3: Start Python backend (optional)
+   npm run python
+   ```
+
 The application will be available at:
-- **Frontend**: http://localhost:3000
-- **Backend API**: http://localhost:5000
+- **Frontend (React)**: http://localhost:3000
+- **Backend API (Node.js)**: http://localhost:5001
+- **Python API**: http://localhost:8000
+- **Python API Docs**: http://localhost:8000/docs
 
 ## 🗺️ **What You'll See**
 

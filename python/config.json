@@ -1,0 +1,88 @@
+{
+  "app": {
+    "name": "Italy Geospatial Explorer",
+    "version": "2.0.0",
+    "description": "Complete geospatial data management and analysis platform",
+    "host": "0.0.0.0",
+    "port": 8000,
+    "debug": true,
+    "reload": true,
+    "log_level": "info"
+  },
+  "database": {
+    "host": "localhost",
+    "port": 5432,
+    "name": "geospatial_db",
+    "user": "postgres",
+    "password": "password",
+    "pool_size": 10,
+    "max_overflow": 20,
+    "echo": false
+  },
+  "features": {
+    "websocket": true,
+    "ml_models": true,
+    "real_time_analysis": true,
+    "data_import": true,
+    "advanced_visualization": true,
+    "spatial_clustering": true,
+    "density_analysis": true,
+    "accessibility_analysis": true,
+    "predictive_modeling": true,
+    "3d_visualization": true
+  },
+  "output": {
+    "directory": "output",
+    "formats": ["html", "png", "json", "geojson", "csv"],
+    "max_file_size": "100MB",
+    "cleanup_interval": "24h"
+  },
+  "models": {
+    "directory": "models",
+    "types": ["accessibility", "clustering", "classification"],
+    "auto_save": true,
+    "retrain_interval": "7d"
+  },
+  "api": {
+    "rate_limit": "100/minute",
+    "cors_origins": [
+      "http://localhost:3000",
+      "http://localhost:5000",
+      "http://localhost:5001"
+    ],
+    "timeout": 30,
+    "max_request_size": "10MB"
+  },
+  "logging": {
+    "level": "INFO",
+    "file": "logs/app.log",
+    "max_size": "10MB",
+    "backup_count": 5,
+    "format": "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  },
+  "security": {
+    "enable_auth": false,
+    "secret_key": "your-secret-key-here",
+    "token_expiry": "24h",
+    "rate_limiting": true
+  },
+  "performance": {
+    "cache_size": "100MB",
+    "cache_ttl": "1h",
+    "max_workers": 4,
+    "chunk_size": 1000
+  },
+  "italy": {
+    "bounds": {
+      "min_lat": 35.5,
+      "max_lat": 47.1,
+      "min_lon": 6.6,
+      "max_lon": 18.5
+    },
+    "center": {
+      "lat": 41.8719,
+      "lon": 12.5674
+    },
+    "default_zoom": 6
+  }
+}
